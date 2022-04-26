@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Find a friend</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Find a friend</h1>
+    <div class="description">
+      <p>We can help you to find and take from our nursery any pet you want.</p>
+      <p>Choose characteristics you want and we will find you a pet.</p>
+    </div>
+    <form action="script.js" method="post">
+      <fieldset id="petInfo">
+        <legend>Your future pet characteristics</legend>
+        <p>Type of pet:</p>
+        <input type="radio" id="dog" name="type" value="dog" />
+        <label for="dog">Dog</label>
+        <input type="radio" id="cat" name="type" value="cat" />
+        <label for="cat">Cat</label>
+        <input type="radio" id="hamster" name="type" value="hamster" />
+        <label for="hamster">Hamster</label>
+        <input type="radio" id="rat" name="type" value="rat" />
+        <label for="rat">Rat</label>
+        <input type="radio" id="parrot" name="type" value="parrot" />
+        <label for="parrot">Parrot</label>
+        <br />
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" value="none">
+          <option value="any">Doesn't matter</option>
+          <option value="boy">Male</option>
+          <option value="girl">Female</option>
+        </select>
+        <p>Age:</p>
+        <input type="checkbox" id="younger6" name="younger6" value="younger6" />
+        <label for="younger6"> Younger then 6 months</label><br />
+        <input type="checkbox" id="from6to12" name="from6to12" value="from6to12"
+        />
+        <label for="from6to12"> 6 months - 1 year</label><br />
+        <input type="checkbox" id="yearto3" name="yearto3" value="yearto3" />
+        <label for="yearto3"> 1 year - 3 years</label><br />
+        <input type="checkbox" id="older3" name="older3" value="older3" />
+        <label for="older3"> Older then 3 years</label><br />
+        <label for="height">Max height (in sm):</label>
+        <input type="range" id="height" name="height" min="10" max="100" />
+        <span id="chosenHeight"></span>
+      </fieldset>
+      <fieldset id="userInfo">
+        <legend>Your contact information</legend>
+        <label for="userName">Your name:</label>
+        <input type="text" name="userName" id="userName" onblur="isNameValid()">
+        <span id="isNameCorrect"></span><br />
+        <label for="phone">Your phone number:</label>
+        <input type="tel" id="phone" name="phone" onblur="isTelephoneValid()"/>
+        <span id="isPhoneCorrect"></span><br/>
+        <label for="email">Your email:</label>
+        <input type="email" id="email" name="email" onblur="isEmailValid()"/>
+        <span id="isEmailCorrect"></span>
+      </fieldset>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
