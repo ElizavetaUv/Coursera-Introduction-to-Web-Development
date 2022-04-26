@@ -10,7 +10,7 @@ slider.oninput = function () {
 // Form validation
 function isNameValid() {
   let name = document.getElementById("userName").value;
-  let regex = /[a-z]{2,}/i;
+  let regex = /^[a-z]{2,}$/i;
   if (regex.test(name)) {
     document.getElementById("isNameCorrect").innerHTML = "Correct input";
   } else {
@@ -30,7 +30,7 @@ function isTelephoneValid() {
 
 function isEmailValid() {
   let email = document.getElementById("email").value;
-  let regex = /(\w\.?)+@[\w\.-]+\.\w{2,4}/;
+  let regex = /^(\w\.?)+@[\w\.-]+\.\w{2,4}$/;
   if (regex.test(email)) {
     document.getElementById("isEmailCorrect").innerHTML = "Correct input";
   } else {

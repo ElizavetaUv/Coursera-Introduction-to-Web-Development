@@ -1,1 +1,2 @@
 # Coursera-Introduction-to-Web-Development
+This a form for searching for a pet from nursery. There you can choose few your future pet characteristics (type of pet, its gender, age and max height). In future based on this characteristics will be created list of must suitable pets. Also you give your contact info and this list will send on your email.
